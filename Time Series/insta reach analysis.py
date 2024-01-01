@@ -43,3 +43,6 @@ values = [home, hashtags,comments,other]
 fig = px.pie(data, values=values, names=labels, 
              title= 'Impressions on Instagram Posts From Various Sources',hole=0.5)
 fig.show()
+#the above code will display a "pie-chart" showing result of various impression.
+
+# To Analyse content of Insta post:
