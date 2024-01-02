@@ -56,3 +56,12 @@ plt.imshow(wordcloud,interpolation='bilinear')
 plt.axis("off")
 plt.show()
 #the above code create a whitebord with the most used words in caption of an insta post.
+
+#Now for the Hashtag column:
+text = " ".join(i for i in data.Hashtags)
+stopwords = set(STOPWORDS)
+wordcloud = WordCloud(stopwords = stopwords, background_color = 'white').generate(text)
+plt.figure(figsize=(12,10))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
