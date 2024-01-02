@@ -65,3 +65,4 @@ plt.figure(figsize=(12,10))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.show()
+#the above code create a whitebord with the most hashtags word.
