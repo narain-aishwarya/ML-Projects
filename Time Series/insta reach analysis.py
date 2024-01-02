@@ -45,4 +45,14 @@ fig = px.pie(data, values=values, names=labels,
 fig.show()
 #the above code will display a "pie-chart" showing result of various impression.
 
-# To Analyse content of Insta post:
+#Analyzing the Content.
+#Creating a wordColud of the most used words for Caption:
+text = " ".join(i for i in data.Caption)
+stopwords = set(STOPWORDS)
+wordcloud = WordCloud(stopwords = stopwords, background_color = 'white').generate(text)
+plt.style.use('classic')
+plt.figure(figsize=(12,10))
+plt.imshow(wordcloud,interpolation='bilinear')
+plt.axis("off")
+plt.show()
+#the above code create a whitebord with the most used words in caption of an insta post.
