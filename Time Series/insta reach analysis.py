@@ -66,3 +66,10 @@ plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.show()
 #the above code create a whitebord with the most hashtags word.
+
+#For analyzing Relationships:
+figure = px.scatter(data_frame = data , x='Impressions',y='Likes', size='Likes', trendline='ols', 
+                    title = "Relationship betweem Likes and Impression")
+figure.show()
+#this will print a scattering plot chart , which shows the relationship between Likes and Impression.
+
