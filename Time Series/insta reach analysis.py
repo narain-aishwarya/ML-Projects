@@ -73,3 +73,14 @@ figure = px.scatter(data_frame = data , x='Impressions',y='Likes', size='Likes',
 figure.show()
 #this will print a scattering plot chart , which shows the relationship between Likes and Impression.
 
+figure = px.scatter(data_frame = data , x='Impressions', y='Comments', size='Comments', trendline='ols',
+                   title = "Relationship between Impression and Comments")
+figure.show()
+
+figure = px.scatter(data_frame = data, x='Impressions', y='Shares', size='Shares', trendline='ols',
+                   title = "Relationship between Shares and Total Impressions")
+figure.show()
+
+figure = px.scatter(data_frame = data, x='Impressions', y='Saves', size='Saves', trendline='ols',
+                   title="Relationship between Total Saves and Total Likes")
+figure.show()
