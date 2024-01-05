@@ -90,3 +90,8 @@ correlation = data.corr()
 print(correlation["Impressions"].sort_values(ascending=False))
 #the ouput showa that the more like , hashtags and saves wil help in getting more reach on instagram.
 
+#Analysis convertion rate:
+#In instagram , conversion rate means how many follower you are getting from the no.of profile visit from a post.
+#formula :- (Follows/Profile Visit)*100
+conversion_rate = (data['Follows'].sum()/data['Profile Visits'].sum())*100
+print(conversion_rate)
