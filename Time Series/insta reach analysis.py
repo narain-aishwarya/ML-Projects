@@ -84,3 +84,9 @@ figure.show()
 figure = px.scatter(data_frame = data, x='Impressions', y='Saves', size='Saves', trendline='ols',
                    title="Relationship between Total Saves and Total Likes")
 figure.show()
+
+#Correlation of all the columns with the Impressions columns:
+correlation = data.corr()
+print(correlation["Impressions"].sort_values(ascending=False))
+#the ouput showa that the more like , hashtags and saves wil help in getting more reach on instagram.
+
