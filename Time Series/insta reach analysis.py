@@ -95,3 +95,28 @@ print(correlation["Impressions"].sort_values(ascending=False))
 #formula :- (Follows/Profile Visit)*100
 conversion_rate = (data['Follows'].sum()/data['Profile Visits'].sum())*100
 print(conversion_rate)
+
+figure = px.scatter(data_frame = data, x="Profile Visits",
+                   y="Follows", size="Follows", trendline="ols",
+                   title="Relation between the no.of Profile Visits and the Followers gained")
+figure.show()
+
+#Training the Model to predict the reach of an instagram post:
+#Spliting the data into training and test set.
+x = np.array(data[["Likes","Follows","Saves","Comments","Shares","Profile Visits"]])
+y = np.array(data["Impressions"])
+xtrain,xtest,ytrain,ytest = train_test_split(x,y,
+                                            test_size = 0.2,
+                                            random_state = 42)
+#training the model:
+model = PassiveAggressiveRegressor()
+model.fit(xtrain,ytrain)
+model.score(xtest,ytest)
+
+#Features = ["Likes","Shares","Saves","Comments","Profile Visits","Follow"]
+result = np.array([[282, 233.0, 4.0, 9.0, 165.0, 54.0]])
+model.predict(result)
+
+"""This is the predicted impression on an instagram post which was predicted by using various features which are present in Instagram.
+For creator's who want to learn how to make there post reach a wider audience , it is important to analyze their data.
+This model will help in the prediction of reach analysis of an Instagram post"""
