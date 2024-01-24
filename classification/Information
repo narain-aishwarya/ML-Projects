@@ -1,3 +1,10 @@
                                                ** Classificaition **
 -Text Emotion Classification is a problem of assigning emotion to a text by understanding the context and the emotion behind the text. 
 -> Example: while typing some message using the keyboard on our mobile phone, it suggest emojis which are closely aligned to the text.
+- Text Emotion Classification is a problem of NLP (Natural Learning Processing ).
+-> Neural Network Model , RNN is used to handle this problem.
+
+
+
+-Libraries:
+pandas, numpy, keras, tensorflow.
